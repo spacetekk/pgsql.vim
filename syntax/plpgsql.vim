@@ -241,6 +241,7 @@ if !exists("pgsql_no_error_codes_highlight")
     syn keyword pgsqlErrorCode fdw_table_not_found fdw_unable_to_create_execution fdw_unable_to_create_reply
     syn keyword pgsqlErrorCode fdw_unable_to_establish_connection plpgsql_error raise_exception no_data_found
     syn keyword pgsqlErrorCode too_many_rows internal_error data_corrupted index_corrupted
+    syn keyword pgsqlErrorCode others
 endif
 
 " Options:

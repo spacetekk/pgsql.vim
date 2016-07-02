@@ -146,7 +146,7 @@ syn match pgsqlEqualOperator "\%( =\)"
 " Keywords:
 syn keyword pgsqlKeyword extension elseif if type perform raise coalesce greatest least foreach loop copy
 syn keyword pgsqlKeyword ordinality index exit immutable strict volatile after before instead
-syn keyword pgsqlKeyword errcode
+syn keyword pgsqlKeyword errcode SQLERRM
 
 " Psql Keywords:
 syn keyword psqlKeyword echo timing
@@ -253,7 +253,7 @@ syn keyword pgsqlType numeric decimal
 syn keyword pgsqlType money
 syn keyword pgsqlType character varying varchar char text
 syn keyword pgsqlType bytea
-syn keyword pgsqlType timestamp date time interval
+syn keyword pgsqlType timestamp date time interval timestamptz
 syn keyword pgsqlType boolean
 syn keyword pgsqlType enum
 syn keyword pgsqlType point line lseg box path polygon circle cidr inet macaddr
@@ -382,7 +382,7 @@ if !exists("pgsql_no_builtin_highlight")
     syn keyword pgsqlBuiltinFunction xmlagg xmlexists xml_is_well_formed xpath xpath_exists
     syn keyword pgsqlBuiltinFunction table_to_xml query_to_xml cursor_to_xml
     " Json Functions:
-    syn keyword pgsqlBuiltinFunction to_json array_to_json row_to_json json_build_array
+    syn keyword pgsqlBuiltinFunction to_json array_to_json row_to_json json_build_array jsonb_build_array
     syn keyword pgsqlBuiltinFunction json_build_object json_object json_each jsonb_array_length
     syn keyword pgsqlBuiltinFunction json_array_length jsonb_each json_each_text jsonb_each_text
     syn keyword pgsqlBuiltinFunction json_extract_path jsonb_extract_path json_extract_path_text
@@ -391,7 +391,7 @@ if !exists("pgsql_no_builtin_highlight")
     syn keyword pgsqlBuiltinFunction jsonb_populate_recordset json_array_elements jsonb_array_elements
     syn keyword pgsqlBuiltinFunction json_array_elements_text jsonb_array_elements_text json_typeof
     syn keyword pgsqlBuiltinFunction jsonb_typeof json_to_record jsonb_to_record json_to_recordset
-    syn keyword pgsqlBuiltinFunction jsonb_to_recordset
+    syn keyword pgsqlBuiltinFunction jsonb_to_recordset jsonb_build_object
     " Sequence Functions:
     syn keyword pgsqlBuiltinFunction currval lastval nextval setval setval
     " Array Functions:

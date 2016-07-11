@@ -22,9 +22,9 @@ if !exists("pgsql_no_keywords")
     syn keyword pgsqlReserved except false fetch for foreign freeze from full grant group having ilike in
     syn keyword pgsqlReserved initially inner intersect into is isnull join lateral leading left like limit
     syn keyword pgsqlReserved localtime localtimestamp natural not notnull null offset on only or order outer
-    syn keyword pgsqlReserved overlaps placing primary references returning right select session_user similar
-    syn keyword pgsqlReserved some symmetric table then to trailing true union unique user using variadic
-    syn keyword pgsqlReserved verbose when where window with
+    syn keyword pgsqlReserved overlaps placing primary references returning right select session_user setof
+    syn keyword pgsqlReserved similar some symmetric table then to trailing true union unique user using
+    syn keyword pgsqlReserved variadic verbose when where window with
 endif
 
 " SQL2011:
@@ -391,7 +391,7 @@ if !exists("pgsql_no_builtin_highlight")
     syn keyword pgsqlBuiltinFunction jsonb_populate_recordset json_array_elements jsonb_array_elements
     syn keyword pgsqlBuiltinFunction json_array_elements_text jsonb_array_elements_text json_typeof
     syn keyword pgsqlBuiltinFunction jsonb_typeof json_to_record jsonb_to_record json_to_recordset
-    syn keyword pgsqlBuiltinFunction jsonb_to_recordset jsonb_build_object
+    syn keyword pgsqlBuiltinFunction jsonb_to_recordset jsonb_build_object jsonb_set
     " Sequence Functions:
     syn keyword pgsqlBuiltinFunction currval lastval nextval setval setval
     " Array Functions:

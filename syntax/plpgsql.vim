@@ -146,7 +146,7 @@ syn match pgsqlEqualOperator "\%( =\)"
 " Keywords:
 syn keyword pgsqlKeyword extension elseif elsif if type perform raise coalesce greatest least foreach loop copy
 syn keyword pgsqlKeyword ordinality index exit immutable strict volatile after before instead
-syn keyword pgsqlKeyword errcode SQLERRM
+syn keyword pgsqlKeyword errcode SQLERRM unlogged
 
 " Psql Keywords:
 syn keyword psqlKeyword echo timing
